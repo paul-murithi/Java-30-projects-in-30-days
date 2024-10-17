@@ -50,7 +50,7 @@ To run any of the projects, follow these steps:
 
 1. **Clone the repository**:  
    ```bash
-   git clone <repository_url>
+   git clone [<repository_url>](https://github.com/paul-murithi/Java-30-projects-in-30-days.git)
    ```
 
 2. **Navigate to the project directory**:  
