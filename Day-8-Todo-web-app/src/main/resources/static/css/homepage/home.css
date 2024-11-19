@@ -1,0 +1,69 @@
+/*Modal*/
+.success-login-modal {
+  position: fixed;
+  top: 1rem;
+  right: 1rem;
+  width: 14rem;
+  background-color: var(--dark-green);
+  color: white;
+  z-index: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 4rem;
+}
+
+.login-modal-content p {
+  text-transform: capitalize;
+}
+
+/*Navigation*/
+nav {
+  display: flex;
+  justify-content: space-evenly;
+  background-color: #f2eaea;
+}
+
+nav > * {
+  padding-top: 1%;
+}
+
+nav .nav-logo {
+  cursor: pointer;
+}
+
+nav .nav-links ul {
+  display: flex;
+  list-style-type: none;
+}
+
+nav .nav-links ul li {
+  padding: 0 1rem;
+}
+
+nav .nav-links ul li a {
+  text-decoration: none;
+  color: black;
+  text-transform: capitalize;
+  font-weight: bold;
+  transition: color 250ms;
+}
+
+nav .nav-links ul li a:hover {
+  color: whitesmoke;
+}
+
+nav .account-info img {
+  width: 35px;
+  aspect-ratio: 1;
+}
+
+/*Welcome Header*/
+section.main-title h1 {
+  text-align: center;
+  font-size: xxx-large;
+}
+
+.main-title h1 .text-grey {
+  background: linear-gradient(180deg, red, white);
+}

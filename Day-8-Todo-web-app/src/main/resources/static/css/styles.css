@@ -6,4 +6,43 @@
   --red: #f23834;
   --orange: #f2b258;
   --light-red: #f87777;
+  --primary-btn-hover: #4d8056;
+
+  --button-input-radius: 4rem;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  padding: 0;
+  margin: 0;
+}
+
+img {
+  max-width: 100%;
+}
+
+input {
+  border: 1px solid grey;
+  border-radius: var(--button-input-radius);
+  padding: 3%;
+}
+
+button.primary-button {
+  background-color: var(--white-cream);
+  border: none;
+  color: #fff;
+  width: 100%;
+  border-radius: var(--button-input-radius);
+  padding: 3%;
+  cursor: pointer;
+  font-size: large;
+  transition: background-color 250ms;
+}
+
+button.primary-button:hover {
+  background-color: var(--primary-btn-hover);
 }

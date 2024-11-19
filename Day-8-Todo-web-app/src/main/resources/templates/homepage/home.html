@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+  <head>
+    <title>Home</title>
+    <!-- <link rel="stylesheet" th:href="@{/css/shared/shared-styles.css}" /> -->
+    <link rel="stylesheet" th:href="@{/css/styles.css}" />
+    <link rel="stylesheet" th:href="@{/css/homepage/home.css}" />
+    <script th:src="@{/JS/homepage/home.js}" defer></script>
+  </head>
+  <body>
+    <nav>
+      <div class="nav-logo">
+        <img th:src="@{/images/Logo.svg}" alt="logo" />
+      </div>
+
+      <div class="nav-links">
+        <ul>
+          <li><a th:href="@{/}">home</a></li>
+          <li><a th:href="@{/tasks}">tasks</a></li>
+          <li><a th:href="@{/about}">about</a></li>
+        </ul>
+      </div>
+
+      <div class="account-info">
+        <img
+          th:src="@{/images/icons/icons8-male-user-100.png}"
+          alt="account-logo"
+        />
+      </div>
+    </nav>
+
+    <section class="main-title">
+      <h1>Hello, Aqeel, <span class="text-grey">Start planning today</span></h1>
+    </section>
+  </body>
+</html>
