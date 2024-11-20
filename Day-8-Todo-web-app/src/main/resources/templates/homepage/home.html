@@ -2,7 +2,7 @@
 <html xmlns:th="http://www.thymeleaf.org">
   <head>
     <title>Home</title>
-    <!-- <link rel="stylesheet" th:href="@{/css/shared/shared-styles.css}" /> -->
+    <link rel="stylesheet" th:href="@{/css/homepage/calendar.css}" />
     <link rel="stylesheet" th:href="@{/css/styles.css}" />
     <link rel="stylesheet" th:href="@{/css/homepage/home.css}" />
     <script th:src="@{/JS/homepage/home.js}" defer></script>
@@ -32,5 +32,48 @@
     <section class="main-title">
       <h1>Hello, Aqeel, <span class="text-grey">Start planning today</span></h1>
     </section>
+
+    <main class="dashboard">
+      <div class="calendar-tasks-grid">
+        <!---->
+        <div class="calendar-tasks-overview">
+          <p class="day-of-the-week"></p>
+          <p class="date"></p>
+          <!---->
+          <div id="calendar">
+            <div class="header">
+              <button id="prev-month">&lt;</button>
+              <h2 id="month-year"></h2>
+              <button id="next-month">&gt;</button>
+            </div>
+            <div class="weekdays">
+              <span>Sun</span>
+              <span>Mon</span>
+              <span>Tue</span>
+              <span>Wed</span>
+              <span>Thu</span>
+              <span>Fri</span>
+              <span>Sat</span>
+            </div>
+            <div id="days" class="days"></div>
+          </div>
+          <!---->
+          <div class="tasks-overview">
+            <div class="completed-tasks">
+              <p class="completed-tasks-title"></p>
+              <p class="completed-tasks-number"></p>
+            </div>
+            <div class="pending-tasks">
+              <p class="pending-tasks-title"></p>
+              <p class="pending-tasks-number"></p>
+            </div>
+          </div>
+        </div>
+        <!---->
+        <div class="tasks"></div>
+      </div>
+    </main>
+
+    <script th:src="@{/JS/homepage/calendar/calendar.js}"></script>
   </body>
 </html>
