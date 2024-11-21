@@ -74,10 +74,39 @@ main.dashboard {
   margin: auto;
   background-color: #f2eaea;
   padding: 1rem;
-  /* height: 15rem; */
   border-radius: 2rem;
 }
 
 .dashboard .calendar-tasks-grid {
   display: flex;
 }
+
+.tasks-overview {
+  display: flex;
+  justify-content: space-between;
+}
+
+.tasks-overview .completed-tasks {
+  background-color: #f0d1a8;
+}
+
+.tasks-overview .pending-tasks {
+  background-color: #c4a49f;
+}
+
+.tasks-overview .tasks-container {
+  text-align: center;
+  word-wrap: break-word;
+  border-radius: 1.175rem;
+  padding: 0.375rem;
+}
+
+.tasks-container .task-title {
+  font-weight: 800;
+}
+
+.tasks-container .tasks-number {
+  font-weight: 500;
+}
+
+/*#F0D1A8*/
