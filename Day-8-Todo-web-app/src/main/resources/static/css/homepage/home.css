@@ -81,6 +81,19 @@ main.dashboard {
   display: flex;
 }
 
+.calendar-tasks-grid .day-of-the-week {
+  color: red;
+  font-size: 3rem;
+  font-family: cursive;
+  margin: 0;
+}
+
+.calendar-tasks-grid .date {
+  font-weight: bolder;
+  font-size: 1.5rem;
+  margin: 0;
+}
+
 .tasks-overview {
   display: flex;
   justify-content: space-between;
@@ -109,4 +122,15 @@ main.dashboard {
   font-weight: 500;
 }
 
-/*#F0D1A8*/
+.tasks .tasks-control {
+  display: flex;
+  justify-content: space-between;
+}
+
+.tasks-control input[name="task-title"] {
+  width: 20%;
+}
+
+.tasks-control input[name="task-detail"] {
+  width: 50%;
+}

@@ -110,3 +110,24 @@ document.addEventListener("DOMContentLoaded", () => {
   prevMonthButton.addEventListener("click", prevMonth);
   nextMonthButton.addEventListener("click", nextMonth);
 });
+
+/**
+ * Update the day and date
+ */
+const dayOfTheWeek = document.getElementById("day-of-the-week");
+const fullDate = document.getElementById("full-date");
+const date = new Date();
+
+dayOfTheWeek.textContent = date.toLocaleDateString("en-US", {
+  weekday: "long",
+});
+
+let day;
+if (date.getDay() < 10) {
+  day = `0${date.getDay()}`;
+}
+
+fullDate.textContent = `${day ? day : date.getDay()}, ${date.toLocaleDateString(
+  "en-US",
+  { month: "long" }
+)} ${date.getFullYear()}`;
