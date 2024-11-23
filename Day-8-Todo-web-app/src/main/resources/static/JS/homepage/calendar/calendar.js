@@ -122,12 +122,9 @@ dayOfTheWeek.textContent = date.toLocaleDateString("en-US", {
   weekday: "long",
 });
 
-let day;
-if (date.getDay() < 10) {
-  day = `0${date.getDay()}`;
-}
-
-fullDate.textContent = `${day ? day : date.getDay()}, ${date.toLocaleDateString(
-  "en-US",
-  { month: "long" }
-)} ${date.getFullYear()}`;
+fullDate.textContent = `${date
+  .getDate()
+  .toString()
+  .padStart(2, "0")}, ${date.toLocaleDateString("en-US", {
+  month: "long",
+})} ${date.getFullYear()}`;
