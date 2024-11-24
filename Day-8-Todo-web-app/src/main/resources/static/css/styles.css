@@ -6,9 +6,10 @@
   --red: #f23834;
   --orange: #f2b258;
   --light-red: #f87777;
-  --primary-btn-hover: #4d8056;
+  --primary-btn-hover: hsl(131, 25%, 39%);
 
-  --button-input-radius: 4rem;
+  --button-input-radius: 0.5rem;
+  --input-padding: 0.5rem 1rem;
 }
 
 * {
@@ -28,19 +29,26 @@ img {
 input {
   border: 1px solid grey;
   border-radius: var(--button-input-radius);
-  padding: 3%;
+  padding: var(--input-padding);
+}
+
+button {
+  cursor: pointer;
+  border-radius: var(--button-input-radius);
+  padding: var(--input-padding);
+  border: none;
+  transition: background-color 250ms;
+}
+
+button:active {
+  transform: scale(0.98);
 }
 
 button.primary-button {
   background-color: var(--white-cream);
-  border: none;
   color: #fff;
   width: 100%;
-  border-radius: var(--button-input-radius);
-  padding: 3%;
-  cursor: pointer;
   font-size: large;
-  transition: background-color 250ms;
 }
 
 button.primary-button:hover {

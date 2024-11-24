@@ -40,7 +40,7 @@
           <p class="day-of-the-week" id="day-of-the-week"></p>
           <p class="date" id="full-date"></p>
           <!---->
-          <div id="calendar">
+          <div id="calendar" class="calendar">
             <div class="header">
               <button id="prev-month">&lt;</button>
               <h2 id="month-year"></h2>
@@ -86,6 +86,40 @@
             />
             <button type="submit" class="submit-task-btn">+</button>
           </form>
+          <!---->
+          <div class="search-actions">
+            <div class="sort-category-priority">
+              <button class="sort-tasks">By Category</button>
+              <button class="sort-tasks">By Priority</button>
+            </div>
+            <div class="search-tasks">
+              <input
+                type="text"
+                name="search-task"
+                id="search-task"
+                placeholder="Search by name"
+              />
+            </div>
+          </div>
+          <!---->
+          <div class="tasks-cards">
+            <div class="task-card">
+              <div class="task-card-header">
+                <p class="task-card-title">Learn Javascript</p>
+                <p class="task-card-priority" hidden>High</p>
+              </div>
+              <div class="task-card-body">
+                <p class="task-card-detail">
+                  Master the language powering the modern web
+                </p>
+                <p class="task-card-date">Start Date: 22/02/2024</p>
+                <div class="task-card-actions">
+                  <button class="task-card-edit">Edit</button>
+                  <button class="task-card-delete">Delete</button>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </main>

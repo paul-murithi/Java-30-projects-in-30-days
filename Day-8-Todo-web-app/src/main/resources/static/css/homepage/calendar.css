@@ -1,9 +1,10 @@
-#calendar {
-  width: 300px;
+.calendar {
+  min-width: 300px;
   border: 1px solid #ddd;
   border-radius: 8px;
   overflow: hidden;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  padding: 0.5rem;
 }
 
 .header {
@@ -11,7 +12,7 @@
   justify-content: space-between;
   align-items: center;
   padding: 10px;
-  background-color: #007bff;
+  background-color: grey;
   color: white;
 }
 
@@ -54,6 +55,10 @@
   cursor: pointer;
 }
 
+.days .day:hover {
+  background-color: hsl(0, 0%, 90%);
+}
+
 .days .day.selected {
   background-color: #007bff;
   color: white;
@@ -72,4 +77,11 @@
   border-radius: 50%;
   position: absolute;
   bottom: 4px;
+}
+
+/**/
+.search-actions {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 2rem;
 }
