@@ -2,6 +2,7 @@ package com.paul.todo.controller;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 
 @Controller
 public class HomeController {
@@ -13,6 +14,12 @@ public class HomeController {
 
     @GetMapping("/login")
     public String login() {
-        return "login/login";
+        return "auth/login";
     }
+
+    @GetMapping("/signup")
+    public String signUp() {
+        return "auth/signup";
+    }
+
 }

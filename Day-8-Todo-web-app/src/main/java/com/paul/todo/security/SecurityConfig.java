@@ -15,7 +15,7 @@ public class SecurityConfig {
         SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
                 http
                                 .authorizeHttpRequests(auth -> auth
-                                                .requestMatchers("/login", "/css/**", "/js/**").permitAll()
+                                                .requestMatchers("/login", "/signup", "/css/**", "/js/**").permitAll()
                                                 .anyRequest().authenticated())
                                 .formLogin(form -> form
                                                 .loginPage("/login")
@@ -31,7 +31,7 @@ public class SecurityConfig {
         UserDetailsService userDetailsService() {
                 return new InMemoryUserDetailsManager(
                                 User.withUsername("user")
-                                                .password("{noop}password") // {noop} means no password encoding
+                                                .password("{noop}password")
                                                 .roles("USER")
                                                 .build());
         }
