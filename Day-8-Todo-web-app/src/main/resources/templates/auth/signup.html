@@ -7,7 +7,12 @@
   </head>
 
   <body class="form-body">
-    <form th:action="@{auth/register}" method="post" class="form-container">
+    <form
+      th:action="@{auth/register}"
+      method="post"
+      class="form-container"
+      id="signup-form"
+    >
       <h2>Sign Up Today</h2>
       <div class="input-container">
         <label for="name">Name:</label>
@@ -34,6 +39,9 @@
         <button type="submit" class="primary-button">Sign Up</button>
         <p>Already registered? <a th:href="@{/login}">Login</a></p>
       </div>
+      <div style="color: red">
+        <p id="error"></p>
+      </div>
       <div th:if="${param.error}">
         <p style="color: red">Invalid username or password</p>
       </div>
@@ -41,5 +49,7 @@
         <p style="color: green">You have been registered successfully</p>
       </div>
     </form>
+
+    <script th:src="@{/JS/auth/auth.js}"></script>
   </body>
 </html>
