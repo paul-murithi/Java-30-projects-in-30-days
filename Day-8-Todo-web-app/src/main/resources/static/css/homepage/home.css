@@ -53,6 +53,15 @@ nav .nav-links ul li a:hover {
   color: black;
 }
 
+nav .nav-links ul li a.active {
+  border-bottom: 2px solid black;
+  color: black;
+}
+
+nav .account-info {
+  cursor: pointer;
+}
+
 nav .account-info img {
   width: 35px;
   aspect-ratio: 1;
@@ -79,7 +88,8 @@ main.dashboard {
 
 .dashboard .calendar-tasks-grid {
   display: flex;
-  justify-content: space-evenly;
+  justify-content: space-between;
+  gap: 2rem;
 }
 
 .calendar-tasks-grid .day-of-the-week {
@@ -123,6 +133,12 @@ main.dashboard {
   font-weight: 500;
 }
 
+.tasks {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
 .tasks .tasks-control {
   display: flex;
   justify-content: space-between;
@@ -150,20 +166,22 @@ main.dashboard {
   background-color: var(--primary-btn-hover);
 }
 
+.search-actions .sort-category-priority button {
+  border: 0.25px solid black;
+}
+
 /**/
 .tasks-cards {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
 }
 
 .task-card {
-  width: 30%;
   background-color: #f2eaea;
   padding: 0.5rem;
   border-radius: 1.175rem;
-  margin: 0.5rem;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  margin: 0.5rem;
 }
 
 .task-card .task-title {
@@ -207,4 +225,16 @@ main.dashboard {
   color: black;
 }
 
+.task-card-detail {
+  color: rgb(92, 92, 92);
+}
+
 /**/
+
+.load-more-btn {
+  text-align: center;
+}
+
+.load-more-btn button.show-more {
+  border: 2px solid #f4c582;
+}

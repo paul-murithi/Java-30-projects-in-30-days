@@ -15,17 +15,19 @@
 
       <div class="nav-links">
         <ul>
-          <li><a th:href="@{/}">home</a></li>
+          <li><a th:href="@{/}" class="active">home</a></li>
           <li><a th:href="@{/tasks}">tasks</a></li>
           <li><a th:href="@{/about}">about</a></li>
         </ul>
       </div>
 
-      <div class="account-info">
-        <img
-          th:src="@{/images/icons/icons8-male-user-100.png}"
-          alt="account-logo"
-        />
+      <div class="account-info" title="my-account">
+        <a th:href="@{/my-account}">
+          <img
+            th:src="@{/images/icons/icons8-male-user-100.png}"
+            alt="account-logo"
+          />
+        </a>
       </div>
     </nav>
 
@@ -94,7 +96,7 @@
             </div>
             <div class="search-tasks">
               <input
-                type="text"
+                type="search"
                 name="search-task"
                 id="search-task"
                 placeholder="Search by name"
@@ -105,20 +107,43 @@
           <div class="tasks-cards">
             <div class="task-card">
               <div class="task-card-header">
-                <p class="task-card-title">Learn Javascript</p>
-                <p class="task-card-priority" hidden>High</p>
+                <p class="task-card-title"><b>Learn Javascript</b></p>
+                <p class="task-card-priority">Priority: High</p>
               </div>
               <div class="task-card-body">
                 <p class="task-card-detail">
                   Master the language powering the modern web
                 </p>
-                <p class="task-card-date">Start Date: 22/02/2024</p>
+                <p class="task-card-date">
+                  <b> Start Date: <span id="task-date">22/02/2025</span> </b>
+                </p>
                 <div class="task-card-actions">
                   <button class="task-card-edit">Edit</button>
                   <button class="task-card-delete">Delete</button>
                 </div>
               </div>
             </div>
+            <div class="task-card">
+              <div class="task-card-header">
+                <p class="task-card-title"><b>Learn Java</b></p>
+                <p class="task-card-priority">Priority: Low</p>
+              </div>
+              <div class="task-card-body">
+                <p class="task-card-detail">
+                  Master the language powering the enterprise software industry
+                </p>
+                <p class="task-card-date">
+                  <b> Start Date: <span id="task-date">22/02/2025</span> </b>
+                </p>
+                <div class="task-card-actions">
+                  <button class="task-card-edit">Edit</button>
+                  <button class="task-card-delete">Delete</button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="load-more-btn">
+            <button class="show-more" id="show-more">Load More</button>
           </div>
         </div>
       </div>
