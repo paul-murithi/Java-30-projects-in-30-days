@@ -7,6 +7,7 @@ import com.paul.repository.TaskRepository;
 import com.paul.todo.entity.Task;
 
 import java.util.List;
+import java.util.Optional;
 
 @Service
 public class TaskService {
@@ -14,8 +15,8 @@ public class TaskService {
     @Autowired
     private TaskRepository taskRepository;
 
-    public List<Task> getAllTasksFoCurrentrUser(Long userId) {
-        return taskRepository.findByUserId(userId);
+    public Optional<Task> getAllTasksFoCurrentrUser(Long userId) {
+        return taskRepository.findById(userId);
     }
 
 }
