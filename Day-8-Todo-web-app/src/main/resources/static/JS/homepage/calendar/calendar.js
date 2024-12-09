@@ -1,4 +1,9 @@
 document.addEventListener("DOMContentLoaded", () => {
+  // Initialise the current date as default for current task creation
+  const showDate = document.getElementById("show-date");
+  const date = new Date();
+  showDate.textContent = date.toDateString();
+
   const calendar = {
     date: new Date(),
     selectedDate: new Date(),
@@ -87,6 +92,10 @@ document.addEventListener("DOMContentLoaded", () => {
       calendar.date.getMonth(),
       day
     );
+
+    const selectedDate = calendar.selectedDate.toDateString();
+    showSelectedDate(selectedDate);
+
     generateDays();
   }
 
@@ -128,3 +137,12 @@ fullDate.textContent = `${date
   .padStart(2, "0")}, ${date.toLocaleDateString("en-US", {
   month: "long",
 })} ${date.getFullYear()}`;
+
+/**
+ * Updates the date on the page to the one the user has currently selected
+ * @param {*} selectedDate The date the user wants to add the task
+ */
+function showSelectedDate(selectedDate) {
+  const showDate = document.getElementById("show-date");
+  showDate.textContent = selectedDate;
+}

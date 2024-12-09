@@ -73,18 +73,24 @@
         </div>
         <!---->
         <div class="tasks">
+          <div class="show-selected-date">
+            <p><b>Date of Task: </b><span id="show-date"></span></p>
+          </div>
+          <!---->
           <form action="#" class="tasks-control">
             <input
               type="text"
               name="task-title"
               id="task-title"
               placeholder="Type title of task"
+              required
             />
             <input
               type="text"
               name="task-detail"
               id="task-detail"
               placeholder="Detail of your Task"
+              required
             />
             <button type="submit" class="submit-task-btn">+</button>
           </form>

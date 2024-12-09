@@ -1,9 +1,6 @@
 package com.paul.todo.entity;
 
 import java.time.LocalDateTime;
-import java.util.Locale.Category;
-
-import org.springframework.scheduling.config.Task;
 
 import jakarta.persistence.CascadeType;
 import jakarta.persistence.Column;
