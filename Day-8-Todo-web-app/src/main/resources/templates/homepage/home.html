@@ -111,17 +111,57 @@
           </div>
           <!---->
           <div class="tasks-cards">
+            <!--Edit task modal - Done on: December 10,2024-->
+            <div id="editTaskModal" class="modal">
+              <div class="modal-content">
+                <button class="close" id="close-modal">&times;</button>
+                <h2 class="modal-title">Edit Task</h2>
+                <form action="#" class="edit-task-form">
+                  <input
+                    type="text"
+                    name="edit-title"
+                    id="title"
+                    placeholder="Title"
+                    required
+                  />
+                  <input
+                    type="text"
+                    name="edit-detail"
+                    id="detail"
+                    placeholder="Detail"
+                    required
+                  />
+                  <input
+                    type="date"
+                    name="edit-date"
+                    id="date"
+                    placeholder="Date"
+                    required
+                  />
+                  <select name="edit-priority" id="priority" required>
+                    <option value="Low">Low</option>
+                    <option value="Medium">Medium</option>
+                    <option value="High">High</option>
+                  </select>
+                  <button class="cancel-edit-btn">Cancel</button>
+                  <button type="submit" class="save-edit-btn">Save</button>
+                </form>
+              </div>
+            </div>
+            <!--Edit task modal - Done on: December 10,2024-->
             <div class="task-card">
               <div class="task-card-header">
                 <p class="task-card-title"><b>Learn Javascript</b></p>
-                <p class="task-card-priority">Priority: High</p>
+                <p class="task-card-priority">
+                  Priority: <span class="task-priority">High</span>
+                </p>
               </div>
               <div class="task-card-body">
                 <p class="task-card-detail">
                   Master the language powering the modern web
                 </p>
                 <p class="task-card-date">
-                  <b> Start Date: <span id="task-date">22/02/2025</span> </b>
+                  <b>Start Date: <span class="task-date">22/02/2025</span></b>
                 </p>
                 <div class="task-card-actions">
                   <button class="task-card-edit">Edit</button>
@@ -129,17 +169,20 @@
                 </div>
               </div>
             </div>
+
             <div class="task-card">
               <div class="task-card-header">
                 <p class="task-card-title"><b>Learn Java</b></p>
-                <p class="task-card-priority">Priority: Low</p>
+                <p class="task-card-priority">
+                  Priority: <span class="task-priority">High</span>
+                </p>
               </div>
               <div class="task-card-body">
                 <p class="task-card-detail">
-                  Master the language powering the enterprise software industry
+                  Master the language powering the enterprise industry
                 </p>
                 <p class="task-card-date">
-                  <b> Start Date: <span id="task-date">22/02/2025</span> </b>
+                  <b>Start Date: <span class="task-date">22/02/2028</span></b>
                 </p>
                 <div class="task-card-actions">
                   <button class="task-card-edit">Edit</button>
@@ -156,5 +199,6 @@
     </main>
 
     <script th:src="@{/JS/homepage/calendar/calendar.js}"></script>
+    <script th:src="@{/JS/homepage/edit-task.js}"></script>
   </body>
 </html>
