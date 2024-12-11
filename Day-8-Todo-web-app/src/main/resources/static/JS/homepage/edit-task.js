@@ -31,7 +31,7 @@ function openEditTaskModal(taskTitle, taskDetail, taskDate, taskPriority) {
 
   titleInput.value = taskTitle;
   detailInput.value = taskDetail;
-  dateInput.value = taskDate;
+  dateInput.value = convertDateToMatchInput(taskDate);
   priorityInput.value = taskPriority;
 
   // Show the modal to enable editings
@@ -49,4 +49,13 @@ cancelBtn.addEventListener("click", closeEditTaskModal);
 function closeEditTaskModal() {
   const modal = document.getElementById("editTaskModal");
   modal.style.display = "none";
+}
+
+function convertDateToMatchInput(date) {
+  // Convert to YYYY-MM-DD Format
+  const [day, month, year] = date.split("/");
+  console.log("Date before change: " + date);
+  console.log(`Date after change: ${year}-${month}-${day}`);
+
+  return `${year}-${month}-${day}`;
 }
