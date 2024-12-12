@@ -8,7 +8,9 @@ editButtons.forEach((button) => {
 
     // Get the text content of the tasks
     const taskTitle = taskCard.querySelector(".task-card-title b").textContent;
-    const taskDetail = taskCard.querySelector(".task-card-detail").textContent;
+    const taskDetail = taskCard
+      .querySelector(".task-card-detail")
+      .textContent.trim();
 
     const taskDate = taskCard.querySelector(".task-date").textContent;
 
@@ -42,8 +44,8 @@ const closeModal = document.getElementById("close-modal");
 closeModal.addEventListener("click", closeEditTaskModal);
 
 // Handle modal cancel button
-const cancelBtn = document.getElementById("cancel-btn");
-cancelBtn.addEventListener("click", closeEditTaskModal);
+// const cancelBtn = document.getElementById("cancel-btn");
+// cancelBtn.addEventListener("click", closeEditTaskModal);
 
 // Function to close the edit task modal
 function closeEditTaskModal() {

@@ -114,36 +114,67 @@
             <!--Edit task modal - Done on: December 10,2024-->
             <div id="editTaskModal" class="modal">
               <div class="modal-content">
-                <button class="close" id="close-modal">&times;</button>
+                <button class="close" id="close-modal" title="Close and exit">
+                  &times;
+                </button>
                 <h2 class="modal-title">Edit Task</h2>
                 <form action="#" class="edit-task-form">
-                  <input
-                    type="text"
-                    name="edit-title"
-                    id="title"
-                    placeholder="Title"
-                    required
-                  />
-                  <input
-                    type="text"
-                    name="edit-detail"
-                    id="detail"
-                    placeholder="Detail"
-                    required
-                  />
-                  <input
-                    type="date"
-                    name="edit-date"
-                    id="date"
-                    placeholder="Date"
-                    required
-                  />
-                  <select name="edit-priority" id="priority" required>
-                    <option value="Low">Low</option>
-                    <option value="Medium">Medium</option>
-                    <option value="High">High</option>
-                  </select>
-                  <button class="cancel-edit-btn">Cancel</button>
+                  <fieldset>
+                    <legend>
+                      <label for="title"> Edit Task Title</label>
+                    </legend>
+                    <input
+                      type="text"
+                      name="edit-title"
+                      id="title"
+                      placeholder="Title"
+                      required
+                    />
+                  </fieldset>
+
+                  <fieldset>
+                    <legend>
+                      <label for="detail">Edit Task Detail</label>
+                    </legend>
+                    <!-- <input
+                      type="text"
+                      name="edit-detail"
+                      id="detail"
+                      placeholder="Detail"
+                      required
+                    /> -->
+                    <textarea
+                      name="edit-detail"
+                      id="detail"
+                      placeholder="detail"
+                    ></textarea>
+                  </fieldset>
+
+                  <fieldset>
+                    <legend>
+                      <label for="date">Edit Task Date</label>
+                    </legend>
+                    <input
+                      type="date"
+                      name="edit-date"
+                      id="date"
+                      placeholder="Date"
+                      required
+                    />
+                  </fieldset>
+
+                  <fieldset>
+                    <legend>
+                      <label for="priority">Edit Tak Priority</label>
+                    </legend>
+                    <select name="edit-priority" id="priority" required>
+                      <option value="Low">Low</option>
+                      <option value="Medium">Medium</option>
+                      <option value="High">High</option>
+                    </select>
+                  </fieldset>
+
+                  <!-- <button class="cancel-edit-btn">Cancel</button> -->
                   <button type="submit" class="save-edit-btn">Save</button>
                 </form>
               </div>
