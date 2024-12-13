@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+  <head>
+    <title>My Account</title>
+    <link rel="stylesheet" th:href="@{/css/auth/my-account.css}" />
+  </head>
+
+  <body>
+    <div class="account-info">
+      <div class="profile-picture">
+        <!-- <img th:src="${user.profilePictureUrl}" alt="Profile Picture" /> -->
+        <img
+          th:src="@{/images/icons/icons8-male-user-100.png}"
+          alt="Profile Picture"
+        />
+      </div>
+      <p th:text="${user.username}">Name</p>
+      <p th:text="${user.email}">Email</p>
+    </div>
+
+    <div class="additional-info">
+      <p>Role: <span>User Role</span></p>
+      <p>
+        Account Created: <span th:text="${user.createdAt}">01/01/2023</span>
+      </p>
+    </div>
+
+    <div class="account-actions">
+      <form th:action="@{/logout}" method="post" style="display: inline">
+        <button type="submit" class="primary-button">Log out</button>
+      </form>
+      <a th:href="@{/update-account}" class="secondary-button"
+        >Update Account Info</a
+      >
+      <form
+        th:action="@{/delete-account}"
+        method="post"
+        style="display: inline"
+      >
+        <button type="submit" class="danger-button">Delete Account</button>
+      </form>
+    </div>
+  </body>
+</html>
