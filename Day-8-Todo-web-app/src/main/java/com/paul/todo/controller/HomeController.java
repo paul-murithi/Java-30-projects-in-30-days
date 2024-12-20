@@ -34,12 +34,6 @@ public class HomeController {
 
     @GetMapping("/my-account")
     public String myAccount(Model model) {
-        User user = new User();
-        user.setUsername("Paul Murithi");
-        user.setEmail("sampleemail@gmail.com");
-        user.setCreatedAt(LocalDateTime.now());
-
-        model.addAttribute("user", user);
 
         return "auth/my-account";
     }
