@@ -5,7 +5,7 @@ import java.time.LocalDateTime;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 
-import com.paul.todo.entity.User;
+import com.paul.todo.model.User;
 
 import org.springframework.ui.Model;
 

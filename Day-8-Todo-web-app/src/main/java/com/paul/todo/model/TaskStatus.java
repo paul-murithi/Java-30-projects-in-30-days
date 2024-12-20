@@ -1,4 +1,4 @@
-package com.paul.todo.entity;
+package com.paul.todo.model;
 
 public enum TaskStatus {
     PENDING,
