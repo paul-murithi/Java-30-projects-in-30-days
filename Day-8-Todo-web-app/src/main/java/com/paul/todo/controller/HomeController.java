@@ -32,10 +32,4 @@ public class HomeController {
         return "auth/signup";
     }
 
-    @GetMapping("/my-account")
-    public String myAccount(Model model) {
-
-        return "auth/my-account";
-    }
-
 }
