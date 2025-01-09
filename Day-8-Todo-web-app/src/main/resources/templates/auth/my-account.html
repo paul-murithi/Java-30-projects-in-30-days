@@ -3,9 +3,24 @@
   <head>
     <title>My Account</title>
     <link rel="stylesheet" th:href="@{/css/auth/my-account.css}" />
+    <script th:src="@{/JS/navigation/script.js}" defer></script>
   </head>
 
   <body>
+    <nav id="js-auto-generate-navigation">
+      <div class="nav-logo">
+        <img th:src="@{/images/Logo.svg}" alt="logo" />
+      </div>
+
+      <div class="account-info" title="my-account">
+        <a th:href="@{/my-account}">
+          <img
+            th:src="@{/images/icons/icons8-male-user-100.png}"
+            alt="account-logo"
+          />
+        </a>
+      </div>
+    </nav>
     <div class="account-info">
       <div class="profile-picture">
         <!-- <img th:src="${user.profilePictureUrl}" alt="Profile Picture" /> -->

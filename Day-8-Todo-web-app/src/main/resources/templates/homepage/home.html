@@ -6,6 +6,7 @@
     <link rel="stylesheet" th:href="@{/css/styles.css}" />
     <link rel="stylesheet" th:href="@{/css/homepage/home.css}" />
     <script th:src="@{/JS/homepage/home.js}" defer></script>
+    <script th:src="@{/JS/navigation/script.js}" defer></script>
   </head>
   <body>
     <nav>
@@ -13,13 +14,7 @@
         <img th:src="@{/images/Logo.svg}" alt="logo" />
       </div>
 
-      <div class="nav-links">
-        <ul>
-          <li><a th:href="@{/}" class="active">home</a></li>
-          <li><a th:href="@{/tasks}">tasks</a></li>
-          <li><a th:href="@{/about}">about</a></li>
-        </ul>
-      </div>
+      <div class="nav-links" id="js-auto-generate-nav"></div>
 
       <div class="account-info" title="my-account">
         <a th:href="@{/my-account}">
